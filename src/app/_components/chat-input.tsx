@@ -1,17 +1,4 @@
-import { Fragment, useState } from "react";
-import {
-  FaceSmileIcon as FaceSmileIconOutline,
-  PaperClipIcon,
-} from "@heroicons/react/24/outline";
-import { Listbox, Transition } from "@headlessui/react";
-import {
-  FaceFrownIcon,
-  FaceSmileIcon as FaceSmileIconMini,
-  FireIcon,
-  HandThumbUpIcon,
-  HeartIcon,
-  XMarkIcon,
-} from "@heroicons/react/20/solid";
+import { PaperClipIcon } from "@heroicons/react/24/outline";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");

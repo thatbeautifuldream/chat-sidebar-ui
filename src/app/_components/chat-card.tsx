@@ -1,11 +1,7 @@
-import { Fragment } from "react";
+import UpvoteBadge from "@/app/_components/upvote-badge";
 import { Menu, Transition } from "@headlessui/react";
-import {
-  CodeBracketIcon,
-  EllipsisVerticalIcon,
-  FlagIcon,
-  StarIcon,
-} from "@heroicons/react/20/solid";
+import { EllipsisVerticalIcon, FlagIcon } from "@heroicons/react/20/solid";
+import { Fragment } from "react";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -35,6 +31,7 @@ export default function ChatCard() {
           </p>
         </div>
         <div className="flex flex-shrink-0 self-center">
+          <UpvoteBadge upvoteCount={10} />
           <Menu as="div" className="relative inline-block text-left">
             <div>
               <Menu.Button className="-m-2 flex items-center rounded-full p-2 text-gray-400 hover:text-gray-600">
@@ -79,6 +76,9 @@ export default function ChatCard() {
           </Menu>
         </div>
       </div>
+      <span>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, enim.
+      </span>
     </div>
   );
 }
