@@ -1,23 +1,47 @@
 "use client";
 
-import { Fragment, useState } from "react";
-import { Dialog, Transition } from "@headlessui/react";
-import { XMarkIcon } from "@heroicons/react/24/outline";
 import ChatCard from "@/app/_components/chat-card";
 import ChatInput from "@/app/_components/chat-input";
+import { Dialog, Transition } from "@headlessui/react";
+import { XMarkIcon } from "@heroicons/react/24/outline";
+import { Fragment, useState } from "react";
 
 export default function SidebarChat() {
   const [open, setOpen] = useState(true);
 
   return (
     <>
-      <button
-        type="button"
-        className="rounded-md bg-white/10 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white/20"
-        onClick={() => setOpen(true)}
-      >
-        Open Chat Panel
-      </button>
+      <div className="flex items-center justify-center h-screen">
+        <div className="flex flex-col items-center justify-center space-y-3">
+          <button
+            type="button"
+            className="rounded-md bg-white/10 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white/20"
+            onClick={() => setOpen(true)}
+          >
+            Open Chat Panel
+          </button>
+          <div className="mt-4">
+            <img
+              className="mx-auto h-10 w-10 rounded-full mt-4"
+              src="https://avatars.githubusercontent.com/u/28717686?v=4"
+              alt=""
+            />
+            <div className="mt-4 flex items-center justify-center space-x-3 text-base">
+              <div className="font-semibold text-gray-50">Milind Mishra</div>
+              <svg
+                viewBox="0 0 2 2"
+                width={3}
+                height={3}
+                aria-hidden="true"
+                className="fill-gray-900"
+              >
+                <circle cx={1} cy={1} r={1} />
+              </svg>
+              <div className="text-gray-200">Software Engineer</div>
+            </div>
+          </div>
+        </div>
+      </div>
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={setOpen}>
           <div className="fixed inset-0" />
